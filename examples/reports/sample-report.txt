@@ -1,0 +1,61 @@
+MARKDOWN LINK AUDITOR
+=====================
+
+Vault: sample-vault/
+
+Files scanned:                8
+Internal links:              10
+Resolved links:               7
+Broken links:                 2
+Ambiguous links:              1
+Orphan notes:                 4
+External (not checked):       1
+Out of scope:                 0
+Ignored links:                0
+Unsupported links:            0
+Read errors:                  0
+
+---------------------------------
+BROKEN LINKS
+---------------------------------
+
+Home.md:5
+  [[Missing Note]]
+  Target not found
+
+Home.md:9
+  ![[assets/missing-image.png]]
+  Attachment not found
+
+
+---------------------------------
+AMBIGUOUS LINKS
+---------------------------------
+
+Home.md:10
+  [[Introduction]]
+  Multiple possible targets
+  Possible matches:
+  - JavaScript/Introduction.md
+  - Python/Introduction.md
+
+
+---------------------------------
+ORPHAN NOTES
+---------------------------------
+
+- Home.md
+- JavaScript/Introduction.md
+- Productivity.md
+- Python/Introduction.md
+
+Potential orphan = no confirmed link from another scanned Markdown note.
+A standalone note may be intentional. Ambiguous and self-links do not count.
+
+---------------------------------
+SUMMARY
+---------------------------------
+
+2 broken links
+1 ambiguous links
+4 potential orphan notes

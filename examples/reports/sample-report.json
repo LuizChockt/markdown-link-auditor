@@ -1,0 +1,68 @@
+{
+  "vault": "sample-vault",
+  "summary": {
+    "files_scanned": 8,
+    "internal_links": 10,
+    "resolved_links": 7,
+    "broken_links": 2,
+    "ambiguous_links": 1,
+    "orphan_notes": 4,
+    "external_links": 1,
+    "out_of_scope_links": 0,
+    "ignored_links": 0,
+    "unsupported_links": 0,
+    "read_errors": 0
+  },
+  "broken_links": [
+    {
+      "source": "Home.md",
+      "line": 5,
+      "target": "Missing Note",
+      "type": "wikilink",
+      "reason": "target_not_found",
+      "matches": []
+    },
+    {
+      "source": "Home.md",
+      "line": 9,
+      "target": "assets/missing-image.png",
+      "type": "wikilink",
+      "reason": "attachment_not_found",
+      "matches": []
+    }
+  ],
+  "ambiguous_links": [
+    {
+      "source": "Home.md",
+      "line": 10,
+      "target": "Introduction",
+      "type": "wikilink",
+      "reason": "multiple_targets",
+      "matches": [
+        "JavaScript/Introduction.md",
+        "Python/Introduction.md"
+      ]
+    }
+  ],
+  "external_links": [
+    {
+      "source": "Home.md",
+      "line": 11,
+      "target": "https://www.python.org/",
+      "type": "markdown",
+      "reason": "not_checked",
+      "matches": []
+    }
+  ],
+  "out_of_scope_links": [],
+  "ignored_links": [],
+  "unsupported_links": [],
+  "orphan_notes": [
+    "Home.md",
+    "JavaScript/Introduction.md",
+    "Productivity.md",
+    "Python/Introduction.md"
+  ],
+  "errors": [],
+  "skipped_paths": []
+}
