@@ -1,4 +1,4 @@
-"""Keep the checked-in demonstration and README output reproducible."""
+"""Keep the checked-in demonstration and reference-guide output reproducible."""
 
 import json
 from pathlib import Path
@@ -26,15 +26,15 @@ def test_checked_in_sample_has_expected_findings():
     }
 
 
-def test_checked_in_reports_and_readme_match_actual_output():
+def test_checked_in_reports_and_reference_match_actual_output():
     report = audit_vault(PROJECT / "examples/sample-vault")
-    readme = (PROJECT / "README.md").read_text(encoding="utf-8")
+    reference = (PROJECT / "docs/reference.md").read_text(encoding="utf-8")
     text = text_report(report)
     structured = json_report(report)
     assert (PROJECT / "examples/reports/sample-report.txt").read_text(encoding="utf-8") == text
     assert (PROJECT / "examples/reports/sample-report.json").read_text(
         encoding="utf-8"
     ) == structured
-    assert text.rstrip() in readme
-    assert structured.rstrip() in readme
+    assert text.rstrip() in reference
+    assert structured.rstrip() in reference
     assert json.loads(structured)["summary"]["files_scanned"] == 8
