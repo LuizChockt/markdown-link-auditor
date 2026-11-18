@@ -30,6 +30,7 @@ def resolve(root, target, kind="wikilink", source="Home.md", embedded=False, exc
         ("../Python.md", "markdown", "Notes/Home.md", "Python.md"),
         ("./Python.md#heading", "markdown", "Home.md", "Python.md"),
         ("Python.md?download=1#heading", "markdown", "Home.md", "Python.md"),
+        ("Python.md?label=%E9#%FF", "markdown", "Home.md", "Python.md"),
         ("cafe\u0301", "wikilink", "Home.md", "Café.md"),
         ("CAF%C3%89.md", "markdown", "Home.md", "Café.md"),
         ("hash%23name.md", "markdown", "Home.md", "hash#name.md"),
