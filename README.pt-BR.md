@@ -1,10 +1,4 @@
-<picture>
-  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="./assets/cover-mobile-dark-pt-BR.svg">
-  <source media="(max-width: 600px)" srcset="./assets/cover-mobile-light-pt-BR.svg">
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/cover-dark-pt-BR.svg">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/cover-light-pt-BR.svg">
-  <img src="./assets/cover-light-pt-BR.svg" alt="Markdown Link Auditor — análise local de Markdown sem alterar notas, com relatórios em texto e JSON." width="1200">
-</picture>
+<img src="./assets/identity/cover-premium.webp" alt="Markdown Link Auditor — análise local de Markdown sem alterar notas, com relatórios em texto e JSON." width="1200">
 
 # Markdown Link Auditor
 
