@@ -63,7 +63,8 @@ are not counted as link uses. Bare website addresses are not automatically linki
    accepted, but do not contribute backlinks to notes.
 4. **Fragments:** remove literal `#fragment` before decoding the path. For
    wikilinks, also remove `^block`. Markdown query strings are ignored.
-   `%23` can therefore refer to a literal `#` in a filename.
+   `%23` can therefore refer to a literal `#` in a filename. Percent-encoded
+   bytes in the file path must form valid UTF-8.
 5. **Portable matching:** compare paths using Unicode NFC plus `casefold()`.
    All matching candidates are retained, including collisions in explicit paths.
    Matching is deliberately case-insensitive even on Linux. Reported paths retain

@@ -17,7 +17,7 @@ REASONS = {
     "excluded_target": "Target is excluded from this audit",
     "unreadable_scope": "Target could not be indexed",
     "backslash_path": "Use forward slashes in local links",
-    "invalid_target": "Control characters in destination are not supported",
+    "invalid_target": "Invalid percent-encoded UTF-8 or control characters in destination",
     "empty_wikilink": "Empty wikilinks are not supported",
     "directory_wikilink": "Wikilinks to directories are not supported",
 }

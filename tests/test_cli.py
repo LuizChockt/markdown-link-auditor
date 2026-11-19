@@ -33,6 +33,15 @@ def test_json_stdout(make_vault, capsys):
     assert json.loads(captured.out)["summary"]["broken_links"] == 1
 
 
+def test_invalid_percent_encoded_filename_cannot_match_a_different_file(make_vault, capsys):
+    root = make_vault({"Home.md": "[Legacy link](Caf%E9.md)", "Caf�.md": ""})
+    assert main([str(root), "--format", "json"]) == 0
+    data = json.loads(capsys.readouterr().out)
+    assert data["summary"]["resolved_links"] == 0
+    assert data["unsupported_links"][0]["reason"] == "invalid_target"
+    assert "Caf�.md" in data["orphan_notes"]
+
+
 def test_repeatable_exclusions(make_vault, capsys):
     root = make_vault(
         {"Home.md": "", "Archive/Old.md": "[[Missing]]", ".obsidian/Note.md": "[[Bad]]"}

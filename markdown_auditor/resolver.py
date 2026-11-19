@@ -48,8 +48,7 @@ def resolve_link(link: Link, source: Path, index: VaultIndex) -> Resolution:
     """No guessed destination is opened, stat'ed or resolved on the filesystem."""
     raw = link.target
     # Windows drive paths must not become URI schemes, even on Unix.
-    decoded = unquote(raw)
-    if WINDOWS_DRIVE.match(raw) or WINDOWS_DRIVE.match(decoded) or decoded.startswith("\\"):
+    if WINDOWS_DRIVE.match(raw):
         return Resolution("out_of_scope", "absolute_path")
     if SCHEME.match(raw) or raw.startswith("//"):
         return Resolution("external", "not_checked")
@@ -59,7 +58,12 @@ def resolve_link(link: Link, source: Path, index: VaultIndex) -> Resolution:
         path = path.split("^", 1)[0].strip()
     else:
         path = path.split("?", 1)[0]
-    path = unquote(path)
+    try:
+        path = unquote(path, errors="strict")
+    except UnicodeDecodeError:
+        return Resolution("unsupported", "invalid_target")
+    if WINDOWS_DRIVE.match(path) or path.startswith("\\"):
+        return Resolution("out_of_scope", "absolute_path")
     if any(ord(char) < 32 for char in path):
         return Resolution("unsupported", "invalid_target")
     if "\\" in path:
