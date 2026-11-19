@@ -1,14 +1,14 @@
 <picture>
-  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="./assets/cover-mobile-dark.svg">
-  <source media="(max-width: 600px)" srcset="./assets/cover-mobile-light.svg">
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/cover-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/cover-light.svg">
-  <img src="./assets/cover-light.svg" alt="Markdown Link Auditor — análise local de Markdown sem alterar notas, com relatórios em texto e JSON." width="1200">
+  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="./assets/cover-mobile-dark-pt-BR.svg">
+  <source media="(max-width: 600px)" srcset="./assets/cover-mobile-light-pt-BR.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/cover-dark-pt-BR.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/cover-light-pt-BR.svg">
+  <img src="./assets/cover-light-pt-BR.svg" alt="Markdown Link Auditor — análise local de Markdown sem alterar notas, com relatórios em texto e JSON." width="1200">
 </picture>
 
 # Markdown Link Auditor
 
-[English](./README.md) · [Referência completa em inglês](./docs/reference.md) · [Relatório de exemplo](./examples/reports/sample-report.txt)
+**Idioma:** [English](./README.md) · Português (Brasil) · [Referência completa em inglês](./docs/reference.md) · [Relatório de exemplo](./examples/reports/sample-report.txt)
 
 [![Testes](https://github.com/LuizChockt/markdown-link-auditor/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/LuizChockt/markdown-link-auditor/actions/workflows/tests.yml)
 

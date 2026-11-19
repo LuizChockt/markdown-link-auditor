@@ -8,7 +8,7 @@
 
 # Markdown Link Auditor
 
-[Português brasileiro](./README.pt-BR.md) · [Full reference](./docs/reference.md) · [Sample report](./examples/reports/sample-report.txt)
+**Language:** English · [Português (Brasil)](./README.pt-BR.md) · [Full reference](./docs/reference.md) · [Sample report](./examples/reports/sample-report.txt)
 
 [![Tests](https://github.com/LuizChockt/markdown-link-auditor/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/LuizChockt/markdown-link-auditor/actions/workflows/tests.yml)
 
